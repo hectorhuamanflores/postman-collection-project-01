@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "9f62992d-7bc5-48cf-a005-9aa56a0bc87a",
+		"name": "microservicio-customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CustomerCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n        \"name\":\"Daniel\",\r\n        \"tyCustomer\":\"Persona\",\r\n        \"documentNumber\":46638412\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8091/Customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerByNumberDocument",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"documentNumber\":46638411\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Customer/numberDocument/",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Customer",
+						"numberDocument",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Daniel\",\r\n    \"tyCustomer\":\"Persona\",\r\n    \"documentNumber\":46638412\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/Customer/updateCustomer/",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Customer",
+						"updateCustomer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8091/Customer/628006bf0548e1537d0fd18599",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"Customer",
+						"628006bf0548e1537d0fd18599"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

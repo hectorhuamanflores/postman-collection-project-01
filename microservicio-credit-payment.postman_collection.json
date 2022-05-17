@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "5a8f17ef-1eb5-4b6c-a2d5-f8342827332b",
+		"name": "microservicio-credit-payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreditPaymentCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idCredit\":\"62816eb7aaebee22fcf454eb\",\r\n        \"tyTrxCredit\":-1,\r\n        \"currency\":1,\r\n        \"amountTrx\":200.0,\r\n        \"dateStar\":\"2022-05-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8097/CreditPayment",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"CreditPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditPaymentAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8097/CreditPayment",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"CreditPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditPaymentById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"idCreditPayment\":\"6281ce78217caf590a37d0a0\",\r\n    \"currency\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8097/CreditPayment/idCreditPayment/",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"CreditPayment",
+						"idCreditPayment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditPaymentByIdCredit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCredit\":\"62816eb7aaebee22fcf454eb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8097/CreditPayment/idCredit/",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"CreditPayment",
+						"idCredit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditPaymentUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"6281ce78217caf590a37d0a0\",\r\n        \"idCredit\":\"62816eb7aaebee22fcf454eb\",\r\n        \"tyTrxCredit\":1,\r\n        \"currency\":1,\r\n        \"amountTrx\":500.0,\r\n        \"dateStar\":\"2022-05-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8097/CreditPayment/updateCreditPayment/",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"CreditPayment",
+						"updateCreditPayment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditPaymentDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8097/CreditPayment/6281ba884787c806ee400970",
+					"host": [
+						"localhost"
+					],
+					"port": "8097",
+					"path": [
+						"CreditPayment",
+						"6281ba884787c806ee400970"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

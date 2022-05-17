@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "1f35d51c-8ef1-48c4-a637-4fa10ed01b1b",
+		"name": "microservicio-credit-consumption",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreditConsumptionCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idCredit\":\"62816eb7aaebee22fcf454eb\",\r\n        \"tyTrxCredit\":1,\r\n        \"currency\":1,\r\n        \"amountTrx\":200.0,\r\n        \"dateStar\":\"2022-05-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8096/CreditConsumption",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditConsumption"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditConsumptionAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8096/CreditConsumption",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditConsumption"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditConsumptionById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"idCreditConsumption\":\"6281ba884787c806ee400970\",\r\n    \"currency\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8096/CreditConsumption/idCreditConsumption/",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditConsumption",
+						"idCreditConsumption",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditConsumptionByIdCredit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCredit\":\"62816eb7aaebee22fcf454eb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8096/CreditConsumption/idCredit/",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditConsumption",
+						"idCredit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditConsumptionUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"6281ba884787c806ee400970\",\r\n        \"idCredit\":\"62816eb7aaebee22fcf454eb\",\r\n        \"tyTrxCredit\":1,\r\n        \"currency\":1,\r\n        \"amountTrx\":200.0,\r\n        \"dateStar\":\"2022-05-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8096/CreditConsumption/updateCreditConsumption/",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditConsumption",
+						"updateCreditConsumption",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditConsumptionDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8096/CreditConsumption/6281ba884787c806ee400970",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditConsumption",
+						"6281ba884787c806ee400970"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditLineCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idCredit\":\"62816eb7aaebee22fcf454eb\",\r\n        \"amountLine\":5000,\r\n        \"dateStar\":\"2022-05-16\",\r\n        \"dateLastModification\":\"2022-05-16\",\r\n        \"status\":\"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8096/CreditLine",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditLine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditLineByIdCredit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCredit\":\"62816eb7aaebee22fcf454eb\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8096/CreditLine/idCredit/",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditLine",
+						"idCredit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditLineUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idCredit\":\"62816eb7aaebee22fcf454eb\",\r\n        \"amountLine\":4000.0,\r\n        \"status\":\"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8096/CreditLine/updateCreditLine/",
+					"host": [
+						"localhost"
+					],
+					"port": "8096",
+					"path": [
+						"CreditLine",
+						"updateCreditLine",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

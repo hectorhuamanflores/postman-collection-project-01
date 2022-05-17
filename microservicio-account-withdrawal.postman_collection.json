@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "414ba9ea-0865-498e-9466-eea4736bea27",
+		"name": "microservicio-account-withdrawal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "WithdrawalList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8094/account/list ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"account",
+						"list "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountWthdrawalCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"accountdeposit\" : \"23232323\",\r\n\"idTrxAccount\" : \"111111111111\",\r\n\"channelBanking\": \"banco\",\r\n\"accountOrigin\": \"01/02/2003\",\r\n\"accountDestiny\": \"01/02/2023\",\r\n\"numerAccount\": \"activo\",\r\n\"typeTrx\": \"retiro\",\r\n\"currency\" :300.00,\r\n\"amount\" :110.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8094/account/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"account",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountWithdrawalById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8094/account/details/829233j5968875a1a90d1d4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"account",
+						"details",
+						"829233j5968875a1a90d1d4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountWithdrawalUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"accountdeposit\" : \"23232323\",\r\n\"idTrxAccount\" : \"111111111111\",\r\n\"channelBanking\": \"banco\",\r\n\"accountOrigin\": \"01/02/2003\",\r\n\"accountDestiny\": \"01/02/2023\",\r\n\"numerAccount\": \"activo\",\r\n\"typeTrx\": \"retiro\",\r\n\"currency\" :300.00,\r\n\"amount\" :110.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8094/account/update/829233j5968875a1a90d1d4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"account",
+						"update",
+						"829233j5968875a1a90d1d4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountWithdrawalDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8094/account/delete/829233j5968875a1a90d1d4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8094",
+					"path": [
+						"account",
+						"delete",
+						"829233j5968875a1a90d1d4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

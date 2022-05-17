@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "29f06459-8dbe-4a9a-a0b3-c5b0efb2b3ab",
+		"name": "microservicio-account-deposit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DepositList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/account/list ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"account",
+						"list "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountDepositCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"accountdeposit\" : \"23232323\",\r\n\"idTrxAccount\" : \"111111111111\",\r\n\"channelBanking\": \"banco\",\r\n\"accountOrigin\": \"01/02/2003\",\r\n\"accountDestiny\": \"01/02/2023\",\r\n\"numerAccount\": \"activo\",\r\n\"typeTrx\": \"deposito\",\r\n\"currency\" :300.00,\r\n\"amount\" :110.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/account/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"account",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountDepositById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/account/details/223243159685055b1c56d5c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"account",
+						"details",
+						"223243159685055b1c56d5c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountDepositUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"accountdeposit\" : \"23232323\",\r\n\"idTrxAccount\" : \"111111111111\",\r\n\"channelBanking\": \"banco\",\r\n\"accountOrigin\": \"01/02/2003\",\r\n\"accountDestiny\": \"01/02/2023\",\r\n\"numerAccount\": \"activo\",\r\n\"typeTrx\": \"deposito\",\r\n\"currency\" :300.00,\r\n\"amount\" :110.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/account/update/223243159685055b1c56d5c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"account",
+						"update",
+						"223243159685055b1c56d5c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountDepositDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8093/account/delete/628273189f82017b1c06d7c5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"account",
+						"delete",
+						"628273189f82017b1c06d7c5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
